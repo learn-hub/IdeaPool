@@ -83,4 +83,9 @@ We can categorize atomic ideas in multiple ways, such as by their type (applicat
 
 Currently, we use static categorizations and tagging within article pages. However, our plan is to support dynamic categorization and filtering, allowing articles to be discovered through various methods and perspectives.
 
+### Future Features
+We recognize that it's not efficient for humans to do all the work of cherry-picking, polishing, categorizing, and refining these ideas. That's why we are going to leverage AI as much as possible. However, the one thing that's very hard to replace is the human ability to recognize those "wow" moments—when an experienced teacher or student finds a fantastic application or explanation of a concept. Our aim is to enable humans to capture and share the core of these most interesting ideas and moments easily and quickly, while AI and automation take care of the rest.
+
+In the future, we aim to integrate AI (such as ChatGPT or similar large language models) to help categorize, extract, and unify the language and content of submitted ideas. Additionally, we plan to introduce bots across popular social media platforms, allowing users to submit and share ideas from platforms like Instagram, Telegram, and X directly to IdeaPool. These ideas will then be processed by AI to generate appropriate content, ensuring smooth integration and expanding IdeaPool's accessibility and reach. 
+
 © 2024 Learnhub.com
