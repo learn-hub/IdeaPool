@@ -1,6 +1,6 @@
 ---
 title: "[Idea-1]: Why Are Manhole Covers Round? Exploring Constant Width Curves"
-labels: approved,
+labels: approved
 ---
 
 ## Idea Content
