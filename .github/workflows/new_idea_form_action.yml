@@ -1,15 +1,15 @@
-name: Create Markdown File on Issue Approval
+name: Create a New Idea Markdown File on Issue Approval
 
 on:
   issues:
     types: [closed]
 
 permissions:
-  contents: write  # Ensure write permissions for the repository
+  contents: write
 
 jobs:
   create-markdown:
-    # if: github.event.issue.state == 'closed' && contains(github.event.issue.labels.*.name, 'approved')
+    if: github.event.issue.state == 'closed' && contains(github.event.issue.labels.*.name, 'approved')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
@@ -42,9 +42,6 @@ jobs:
 
           echo "Creating markdown file for issue #${ISSUE_NUMBER}"
 
-          # Ensure the 'issues' directory exists
-          mkdir -p issues
-
           MD_CONTENT="---
           title: \"$ISSUE_TITLE\"
           labels: $ISSUE_LABELS
@@ -58,13 +55,13 @@ jobs:
           "
 
           # Safely write the content to the markdown file
-          echo "$MD_CONTENT" > "issues/issue-${ISSUE_NUMBER}.md"
-          echo "Created markdown file: issues/issue-${ISSUE_NUMBER}.md"
+          echo "$MD_CONTENT" > "1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md"
+          echo "Created markdown file: 1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md"
         
       - name: Debugging step - Check Markdown content
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
-          cat "issues/issue-${ISSUE_NUMBER}.md"
+          cat "1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md"
 
       - name: Commit the new markdown file
         run: |
@@ -72,7 +69,6 @@ jobs:
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
           git status  # Check if there are any changes to commit
-          git add issues/issue-${ISSUE_NUMBER}.md
-          git add media/* || true  # Ignore errors if no media files exist
+          git add 1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md
           git commit -m "Add markdown file for issue #${ISSUE_NUMBER}" || echo "No changes to commit"
           git push || echo "No new commits to push"
