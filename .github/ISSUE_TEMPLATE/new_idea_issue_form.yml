@@ -71,12 +71,134 @@ body:
         - disambiguity guide
         - pain
 
+  - type: dropdown
+    id: type
+    attributes:
+      label: Main Educational Subject
+      description: Select the main educational subject
+      options:
+        - math--arithmetic
+        - math--algebra
+        - math--geometry
+        - math--trigonometry
+        - math--calculus
+        - math--statistics
+        - math--probability
+        - math--number-theory
+        - math--linear-algebra
+        - math--differential-equations
+        - math--discrete-mathematics
+        - math--topology
+        - math--mathematical-logic
+        - math--complex-analysis
+        - math--real-analysis
+        - math--numerical-analysis
+        - math--mathematical-modeling
+        - math--set-theory
+        - math--game-theory
+        - math--optimization
+        - physics--classical-mechanics
+        - physics--thermodynamics
+        - physics--electromagnetism
+        - physics--optics
+        - physics--quantum-mechanics
+        - physics--relativity
+        - physics--particle-physics
+        - physics--astrophysics
+        - physics--nuclear-physics
+        - physics--condensed-matter
+        - physics--fluid-dynamics
+        - physics--atomic-physics
+        - physics--statistical-mechanics
+        - physics--plasma-physics
+        - physics--wave-theory
+        - physics--acoustics
+        - physics--biophysics
+        - physics--geophysics
+        - physics--quantum-field-theory
+        - physics--experimental-physics
+        - chemistry--organic-chemistry
+        - chemistry--inorganic-chemistry
+        - chemistry--physical-chemistry
+        - chemistry--analytical-chemistry
+        - chemistry--biochemistry
+        - chemistry--theoretical-chemistry
+        - chemistry--environmental-chemistry
+        - chemistry--materials-science
+        - chemistry--polymer-chemistry
+        - chemistry--supramolecular-chemistry
+        - chemistry--nanochemistry
+        - chemistry--industrial-chemistry
+        - chemistry--quantum-chemistry
+        - chemistry--electrochemistry
+        - chemistry--chemical-engineering
+        - chemistry--spectroscopy
+        - chemistry--crystallography
+        - chemistry--surface-chemistry
+        - chemistry--photochemistry
+        - chemistry--organometallic-chemistry
+        - biology--cell-biology
+        - biology--genetics
+        - biology--molecular-biology
+        - biology--evolutionary-biology
+        - biology--ecology
+        - biology--microbiology
+        - biology--biochemistry
+        - biology--anatomy
+        - biology--physiology
+        - biology--developmental-biology
+        - biology--neuroscience
+        - biology--immunology
+        - biology--botany
+        - biology--zoology
+        - biology--marine-biology
+        - biology--environmental-biology
+        - biology--virology
+        - biology--bioinformatics
+        - biology--bioengineering
+        - biology--astrobiology
+        - computer--programming
+        - computer--algorithms
+        - computer--data-structures
+        - computer--operating-systems
+        - computer--databases
+        - computer--computer-networks
+        - computer--artificial-intelligence
+        - computer--machine-learning
+        - computer--computer-graphics
+        - computer--human-computer-interaction
+        - computer--software-engineering
+        - computer--theory-of-computation
+        - computer--cybersecurity
+        - computer--computer-architecture
+        - computer--distributed-systems
+        - computer--cloud-computing
+        - computer--web-development
+        - computer--mobile-computing
+        - computer--computer-vision
+        - computer--natural-language-processing
+
+  - type: dropdown
+    id: level
+    attributes:
+      label: Education Level
+      description: Select the appropriate education level for this idea.
+      options:
+        - pre-elementary and above
+        - elementary and above
+        - middle school and above
+        - high school and above
+        - college and above
+        - bachelor's and above
+        - master's and above
+        - professional/PhD and above
+
   - type: textarea
     id: main-education-subjects
     attributes:
-      label: Educational Subjects
-      description: Specify the main educational subjects this idea can be used for.
-      placeholder: List the subjects relevant to this idea.
+      label: Educational Sub-Category
+      description: Specify the sub-categories of the main educational subjects that this idea applies to.
+      placeholder: List the relevant sub-categories for this idea.
 
   - type: textarea
     id: main-topics
