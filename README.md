@@ -62,6 +62,16 @@ Our process is modeled after the RFC approach, using clearly defined stages for 
 
 The process starts with submitting an issue using a predefined template. If it passes a minimum check, it will be marked as "accepted-candidate," and a new markdown file will automatically be created under the "active" folder for further discussion and work.
 
+### Choosing the Template
+<img width="853" alt="Screenshot 2024-09-07 at 5 24 35 AM" src="https://github.com/user-attachments/assets/792e8cf6-cab4-46a0-85d1-fffebde3ea2e">
+
+### Filling Out the Form
+<img width="852" alt="Screenshot 2024-09-07 at 5 25 05 AM" src="https://github.com/user-attachments/assets/c781f28f-07cb-4723-815c-5da279e205bf">
+
+### Automatically Creating a New Idea in the Active Folder
+<img width="1332" alt="Screenshot 2024-09-07 at 5 25 44 AM" src="https://github.com/user-attachments/assets/a7a0b839-b771-44d1-b64a-fffebad88256">
+
+
 If the submission is exceptionally well-prepared, it can be moved directly to the "accepted" folder to streamline the process.
 
 When a new idea connects to an existing one, contributors can submit a pull request to link or update content. For questions or clarifications, new issues can be opened.
