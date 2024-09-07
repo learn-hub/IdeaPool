@@ -1,6 +1,6 @@
 ---
 title: "[Idea-1]: کاربرد تابع در نقشه کشی، هواپیما وموقعیت‌یابی"
-labels: approved,
+labels: approved
 ---
 
 ## Idea Content
