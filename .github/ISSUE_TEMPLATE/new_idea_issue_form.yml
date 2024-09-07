@@ -1,42 +1,46 @@
 name: New Idea
-description: Submit a new idea to share with the community
+description: Submit a new idea to share with the IdeaPool community.
 title: "[Idea-1]: "
 labels: ["idea-1", "triage"]
 projects: ["ideapool/1"]
 assignees:
-  - octocat
+  - learn-hub
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to share a new idea! This platform is for educators and students to share ideas like examples or applications of mathematical concepts that are engaging, attractive, and useful for understanding concepts better.
+        Thank you for contributing a new idea! IdeaPool is a space for educators and students to share creative and useful ideas, such as examples or applications of mathematical concepts, that enhance understanding and engagement.
+
   - type: input
     id: title
     attributes:
-      label: Title
-      description: What is this idea?
-      placeholder: Provide a brief title for your idea.
+      label: Idea Title
+      description: Provide a concise title for your idea.
+      placeholder: Enter a brief and descriptive title for your idea.
     validations:
       required: true
-  - type: textarea
-    id: main-idea
-    attributes:
-      label: Main Idea/Synopsis/Description
-      description: Share the main idea, synopsis, or description of this idea.
-      placeholder: Describe the idea in detail.
-    validations:
-      required: true
+
   - type: input
     id: link
     attributes:
-      label: Link
-      description: Provide any relevant links related to this idea (optional).
-      placeholder: Include a URL if applicable.
+      label: Relevant Link
+      description: Share any relevant link (optional).
+      placeholder: Include a URL if relevant.
+
+  - type: textarea
+    id: main-idea
+    attributes:
+      label: Main Idea/Synopsis
+      description: Describe the main idea or concept in detail.
+      placeholder: Explain the idea thoroughly. You may include text, images, or any helpful resources.
+    validations:
+      required: true
+
   - type: dropdown
     id: type
     attributes:
-      label: Type
-      description: What type of idea are you submitting?
+      label: Idea Type
+      description: Select the type of idea you're submitting.
       options:
         - application
         - definition
@@ -50,13 +54,13 @@ body:
         - level system
         - comic references
         - theme (approach)
-        - topic based thesaurus
+        - topic-based thesaurus
         - engagement aspects
         - poem
         - riddle
         - funny clip
         - meme
-        - gifs
+        - gif
         - movie
         - quiz
         - question
@@ -66,46 +70,67 @@ body:
         - sub-section
         - disambiguity guide
         - pain
+
   - type: textarea
-    id: comments-notes
+    id: main-education-subjects
     attributes:
-      label: Comment/Notes
-      description: Any comments, notes or additional thoughts on the idea?
-      placeholder: Provide any additional thoughts or feedback.
+      label: Educational Subjects
+      description: Specify the main educational subjects this idea can be used for.
+      placeholder: List the subjects relevant to this idea.
+
+  - type: textarea
+    id: main-topics
+    attributes:
+      label: Main Topics
+      description: List the main topics that describe the context of this idea.
+      placeholder: Provide the core topics associated with this idea.
+
   - type: textarea
     id: other-related-topics
     attributes:
       label: Other Related Topics
-      description: List any other related topics that this idea connects with.
-      placeholder: Mention related topics or concepts.
+      description: Mention any other topics this idea connects with.
+      placeholder: List related topics or areas of interest.
+
+  - type: textarea
+    id: comments-notes
+    attributes:
+      label: Comments/Notes
+      description: Share any additional comments or insights.
+      placeholder: Provide any additional notes or feedback.
+
   - type: input
     id: overall-score
     attributes:
       label: Overall Score
-      description: Provide an overall score for this idea (e.g., 1-10).
-      placeholder: Rate this idea from 1 to 10.
+      description: Rate the overall quality of this idea (1-10).
+      placeholder: Enter a rating from 1 to 10.
+
   - type: input
     id: usefulness-score
     attributes:
       label: Usefulness Score
-      description: How useful is this idea? (e.g., 1-10)
-      placeholder: Rate the usefulness of this idea from 1 to 10.
+      description: Rate how useful this idea is (1-10).
+      placeholder: Enter a rating from 1 to 10.
+
   - type: input
     id: ease-of-follow-score
     attributes:
-      label: Easy to Follow Score
-      description: How easy is this idea to follow? (e.g., 1-10)
-      placeholder: Rate the ease of following this idea from 1 to 10.
+      label: Ease of Understanding Score
+      description: Rate how easy it is to follow this idea (1-10).
+      placeholder: Enter a rating from 1 to 10.
+
   - type: input
     id: contact
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
+      label: Contact Information
+      description: Provide your contact details in case we need more information.
       placeholder: ex. your.email@example.com
+
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      label: Code of Conduct Agreement
+      description: By submitting this idea, you agree to follow our [Code of Conduct](https://example.com).
       options:
         - label: I agree to follow this project's Code of Conduct
