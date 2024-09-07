@@ -1,0 +1,111 @@
+name: New Idea
+description: Submit a new idea to share with the community
+title: "[Idea-1]: "
+labels: ["idea-1", "triage"]
+projects: ["ideapool/1"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to share a new idea! This platform is for educators and students to share ideas like examples or applications of mathematical concepts that are engaging, attractive, and useful for understanding concepts better.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: What is this idea?
+      placeholder: Provide a brief title for your idea.
+    validations:
+      required: true
+  - type: textarea
+    id: main-idea
+    attributes:
+      label: Main Idea/Synopsis/Description
+      description: Share the main idea, synopsis, or description of this idea.
+      placeholder: Describe the idea in detail.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Provide any relevant links related to this idea (optional).
+      placeholder: Include a URL if applicable.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: What type of idea are you submitting?
+      options:
+        - application
+        - definition
+        - explanation
+        - analogy
+        - deep explanation
+        - problem/question
+        - graph
+        - joke
+        - concept map
+        - level system
+        - comic references
+        - theme (approach)
+        - topic based thesaurus
+        - engagement aspects
+        - poem
+        - riddle
+        - funny clip
+        - meme
+        - gifs
+        - movie
+        - quiz
+        - question
+        - easter egg
+        - twists
+        - ask for help
+        - sub-section
+        - disambiguity guide
+        - pain
+  - type: textarea
+    id: comments-notes
+    attributes:
+      label: Comment/Notes
+      description: Any comments, notes or additional thoughts on the idea?
+      placeholder: Provide any additional thoughts or feedback.
+  - type: textarea
+    id: other-related-topics
+    attributes:
+      label: Other Related Topics
+      description: List any other related topics that this idea connects with.
+      placeholder: Mention related topics or concepts.
+  - type: input
+    id: overall-score
+    attributes:
+      label: Overall Score
+      description: Provide an overall score for this idea (e.g., 1-10).
+      placeholder: Rate this idea from 1 to 10.
+  - type: input
+    id: usefulness-score
+    attributes:
+      label: Usefulness Score
+      description: How useful is this idea? (e.g., 1-10)
+      placeholder: Rate the usefulness of this idea from 1 to 10.
+  - type: input
+    id: ease-of-follow-score
+    attributes:
+      label: Easy to Follow Score
+      description: How easy is this idea to follow? (e.g., 1-10)
+      placeholder: Rate the ease of following this idea from 1 to 10.
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. your.email@example.com
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      options:
+        - label: I agree to follow this project's Code of Conduct

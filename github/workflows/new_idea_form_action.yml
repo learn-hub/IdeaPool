@@ -1,0 +1,78 @@
+name: Create Markdown File on Issue Approval
+
+on:
+  issues:
+    types: [closed]
+
+permissions:
+  contents: write  # Ensure write permissions for the repository
+
+jobs:
+  create-markdown:
+    # if: github.event.issue.state == 'closed' && contains(github.event.issue.labels.*.name, 'approved')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Debugging step - Print Issue Info
+        run: |
+          echo "Issue Number: ${{ github.event.issue.number }}"
+          echo "Issue Title: ${{ github.event.issue.title }}"
+          echo "Issue Labels: $(echo "${{ github.event.issue.labels.*.name }}" | tr '\n' ', ')"
+          echo "Issue Body: ${{ github.event.issue.body }}"
+
+      - name: Check if Issue Number is Set
+        run: |
+          if [ -z "${{ github.event.issue.number }}" ]; then
+            echo "Error: ISSUE_NUMBER is not set. Exiting."
+            exit 1
+          fi
+
+      - name: Create Markdown file from issue
+        id: create_md
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_LABELS: ${{ toJSON(github.event.issue.labels) }} # JSON format for labels
+        run: |
+          # Extract labels from JSON using jq
+          ISSUE_LABELS=$(echo "$ISSUE_LABELS" | jq -r '.[].name' | tr '\n' ', ')
+
+          echo "Creating markdown file for issue #${ISSUE_NUMBER}"
+
+          # Ensure the 'issues' directory exists
+          mkdir -p issues
+
+          MD_CONTENT="---
+          title: \"$ISSUE_TITLE\"
+          labels: $ISSUE_LABELS
+          ---
+
+          ## Idea Content
+
+          $ISSUE_BODY
+
+          ## Attachments
+          "
+
+          # Safely write the content to the markdown file
+          echo "$MD_CONTENT" > "issues/issue-${ISSUE_NUMBER}.md"
+          echo "Created markdown file: issues/issue-${ISSUE_NUMBER}.md"
+        
+      - name: Debugging step - Check Markdown content
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          cat "issues/issue-${ISSUE_NUMBER}.md"
+
+      - name: Commit the new markdown file
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          git config --local user.name "github-actions"
+          git config --local user.email "github-actions@github.com"
+          git status  # Check if there are any changes to commit
+          git add issues/issue-${ISSUE_NUMBER}.md
+          git add media/* || true  # Ignore errors if no media files exist
+          git commit -m "Add markdown file for issue #${ISSUE_NUMBER}" || echo "No changes to commit"
+          git push || echo "No new commits to push"
