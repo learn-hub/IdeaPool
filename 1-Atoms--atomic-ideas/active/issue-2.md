@@ -17,8 +17,10 @@ _No response_
 
 کتاب جادوی ریاضی
 
+<img width="976" alt="Screenshot 2024-09-07 at 12 51 33 PM" src="https://github.com/user-attachments/assets/6705efd0-db51-4696-b829-b3fa596a2b29">
 
 ### Idea Type
+
 
 application
 
