@@ -23,14 +23,30 @@ body:
   - type: input
     id: link
     attributes:
-      label: Relevant Link
+      label: Relevant/Source Link (video, book, etc.)
       description: Share any relevant link (optional).
       placeholder: Include a URL if relevant.
+
+  - type: input
+    id: link-section
+    attributes:
+      label: Specific part for Relevant/Source Link (start and end time for video or pages for book, etc.)
+      description: Provide specific parts of the source (optional). 
+      placeholder: Include time range or page numbers if relevant.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary/Synopsis
+      description: Provide a short summary of the core idea.
+      placeholder: Give a quick overview of the core idea/concept.
+    validations:
+      required: true
 
   - type: textarea
     id: main-idea
     attributes:
-      label: Main Idea/Synopsis
+      label: Main Idea
       description: Describe the main idea or concept in detail.
       placeholder: Explain the idea thoroughly. You may include text, images, or any helpful resources.
     validations:
@@ -72,9 +88,9 @@ body:
         - pain
 
   - type: dropdown
-    id: subject
+    id: subject-area
     attributes:
-      label: Main Educational Subject
+      label: Main Educational Subject Area
       description: Select the main educational subject
       options:
         - math--arithmetic
@@ -181,7 +197,7 @@ body:
   - type: dropdown
     id: education-level
     attributes:
-      label: Education Level
+      label: Education Level (difficulty level)
       description: Select the appropriate education level for this idea.
       options:
         - pre-elementary and above
