@@ -30,7 +30,7 @@ body:
   - type: input
     id: link-section
     attributes:
-      label: Specific part for Relevant/Source Link (start and end time for video or pages for book, etc.)
+      label: Specific Section of the Source (e.g., start/end time for videos or page numbers for books)
       description: Provide specific parts of the source (optional). 
       placeholder: Include time range or page numbers if relevant.
 
