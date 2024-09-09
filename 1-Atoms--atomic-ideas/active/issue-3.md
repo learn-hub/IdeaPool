@@ -31,11 +31,11 @@ Application
 
 ### Main Educational Subject Area
 
-mathematics--arithmetic
+math--arithmetic
 
 ### Education Level (difficulty level)
 
-Elementary and above
+elementary and above
 
 ### Educational Sub-Category
 
@@ -43,15 +43,15 @@ Multiplication
 
 ### Main Topics
 
-Physics, Multiplication, Density
+Physics, Environment
 
 ### Other Related Topics
 
-Water, Flood, Fluid Dynamics (Can a specific amount of snow lead to flooding in mountainous regions?)
+Water, Flood, Fluid Dynamics, Solid and Fluid, , Density
 
 ### Comments/Notes
 
-_No response_
+Can a specific amount of snow lead to flooding in mountainous regions?
 
 ### Overall Score
 
