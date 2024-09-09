@@ -27,7 +27,7 @@ A method for calculating the amount of water in a given amount of snow by using 
 
 ### Idea Type
 
-Application
+application
 
 ### Main Educational Subject Area
 
