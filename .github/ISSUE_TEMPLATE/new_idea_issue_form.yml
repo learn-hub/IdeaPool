@@ -231,6 +231,20 @@ body:
       placeholder: List related topics or areas of interest.
 
   - type: textarea
+    id: faq
+    attributes:
+      label: FAQ
+      description: Provide common questions and answers related to the topic. This section helps address typical concerns or doubts that may arise.
+      placeholder: Enter frequently asked questions and their corresponding answers here.
+
+  - type: textarea
+    id: experiential-scenarios
+    attributes:
+      label: Experiential Scenarios
+      description: Describe real-world scenarios or challenges where the concept can be applied, allowing students to engage in practical problem-solving.
+      placeholder: List and explain experiential scenarios that involve applying the concept to real-world problems or challenges.
+
+  - type: textarea
     id: comments-notes
     attributes:
       label: Comments/Notes
