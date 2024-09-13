@@ -57,6 +57,7 @@ body:
     attributes:
       label: Idea Type
       description: Select the type of idea you're submitting.
+      value: application
       options:
         - application
         - definition
