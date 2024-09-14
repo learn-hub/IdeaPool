@@ -58,34 +58,35 @@ body:
       label: Idea Type
       description: Select the type of idea you're submitting.
       options:
-        - application
-        - definition
-        - explanation
-        - analogy
-        - deep explanation
-        - problem/question
-        - graph
-        - joke
-        - concept map
-        - level system
-        - comic references
-        - theme (approach)
-        - topic-based thesaurus
-        - engagement aspects
-        - poem
-        - riddle
-        - funny clip
-        - meme
-        - gif
-        - movie
-        - quiz
-        - question
-        - easter egg
-        - twists
-        - ask for help
-        - sub-section
-        - disambiguity guide
-        - pain
+        - Application
+        - Sense-making
+        - Definition
+        - Explanation
+        - Analogy
+        - In-depth explanation
+        - Problem/Question
+        - Graph
+        - Joke
+        - Concept map
+        - Level system
+        - Comic references
+        - Thematic approach
+        - Topic-based thesaurus
+        - Engagement elements
+        - Poem
+        - Riddle
+        - Funny clip
+        - Meme
+        - GIF
+        - Movie
+        - Quiz
+        - Question
+        - Easter egg
+        - Plot twists
+        - Call for help
+        - Sub-section
+        - Disambiguation guide
+        - Pain point
 
   - type: dropdown
     id: subject-area
