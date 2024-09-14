@@ -30,7 +30,7 @@ _No response_
 
 ### Idea Type
 
-None
+Sense-making
 
 ### Main Educational Subject Area
 
