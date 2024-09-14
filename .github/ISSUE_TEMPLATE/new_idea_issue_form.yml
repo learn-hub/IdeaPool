@@ -217,12 +217,12 @@ body:
       description: Specify the sub-categories of the main educational subjects that this idea applies to.
       placeholder: List the relevant sub-categories for this idea.
   
-  - type: textarea
-    id: standards
-    attributes:
-      label: Standards
-      description: Indicate the relevant standards this idea addresses e.g., LearnHub Standards, Common Core, Illustrative Mathematics, etc.
-      placeholder: LH: R.2.f.3; CCSS: 4.NBT.6; IM: 6.RP;
+- type: textarea
+  id: standards
+  attributes:
+    label: Standards
+    description: "Indicate the relevant standards this idea addresses (e.g., LearnHub Standards, Common Core, Illustrative Mathematics, etc.)"
+    placeholder: "LH: R.2.f.3; CCSS: 4.NBT.6; IM: 6.RP;"
 
   - type: textarea
     id: main-topics
