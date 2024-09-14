@@ -41,8 +41,9 @@ This structure allows us to break down educational content into manageable, shar
 ### RFC-Inspired Process
 
 Our process is modeled after the RFC approach, using clearly defined stages for each level of content:
-/atomic-ideas
+
 ```
+/atomic-ideas
 ├── 0000-template.md      # Template for proposing new ideas
 ├── README.md             # Overview and guidelines for the idea submission process
 ├── accepted/             # Folder for accepted ideas
