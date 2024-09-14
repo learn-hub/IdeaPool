@@ -37,7 +37,7 @@ Gaining a tangible sense of the vastness of large numbers by calculating the tim
 
 ### Idea Type
 
-making sense
+Sense-making
 
 ### Main Educational Subject Area
 
