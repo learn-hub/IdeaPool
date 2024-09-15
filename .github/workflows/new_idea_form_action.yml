@@ -19,7 +19,6 @@ jobs:
         run: |
           echo "Issue Number: ${{ github.event.issue.number }}"
           echo "Issue Title: ${{ github.event.issue.title }}"
-          echo "Issue Labels: $(echo "${{ github.event.issue.labels.*.name }}" | tr '\n' ', ')"
           echo "Issue Body: ${{ github.event.issue.body }}"
 
       - name: Check if Issue Number is Set
@@ -29,35 +28,18 @@ jobs:
             exit 1
           fi
 
-      - name: Create Markdown file from issue
-        id: create_md
+      - name: Generate Markdown content using OpenAI API
+        id: generate_md
         env:
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          ISSUE_TITLE: ${{ github.event.issue.title }}
-          ISSUE_BODY: ${{ github.event.issue.body }}
-          ISSUE_LABELS: ${{ toJSON(github.event.issue.labels) }} # JSON format for labels
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          # Extract labels from JSON using jq
-          ISSUE_LABELS=$(echo "$ISSUE_LABELS" | jq -r '.[].name' | tr '\n' ', ')
+          ISSUE_BODY=$(printf '%s' "${{ github.event.issue.body }}" | jq -Rs .)  # Escape special characters using jq
+          echo "Debugging log: ISSUE_BODY content:"
+          echo "$ISSUE_BODY"
+          MD_CONTENT=$(bash .github/workflows/generate_markdown.sh "$ISSUE_BODY")
+          echo "$MD_CONTENT" > "1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
+          echo "Created markdown file: 1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
 
-          echo "Creating markdown file for issue #${ISSUE_NUMBER}"
-
-          MD_CONTENT="---
-          title: \"$ISSUE_TITLE\"
-          labels: $ISSUE_LABELS
-          ---
-
-          ## Idea Content
-
-          $ISSUE_BODY
-
-          ## Attachments
-          "
-
-          # Safely write the content to the markdown file
-          echo "$MD_CONTENT" > "1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md"
-          echo "Created markdown file: 1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md"
-        
       - name: Debugging step - Check Markdown content
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
