@@ -46,7 +46,7 @@ jobs:
         run: |
           FILE_PATH="1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
           if [ -f "$FILE_PATH" ]; then
-            echo "file_exists=true" >> $GITHUB_ENV
+            echo "file_exists=false" >> $GITHUB_ENV
           else
             echo "file_exists=false" >> $GITHUB_ENV
           fi
