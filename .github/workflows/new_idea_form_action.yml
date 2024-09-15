@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   create-markdown:
@@ -40,17 +41,47 @@ jobs:
           echo "$MD_CONTENT" > "1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
           echo "Created markdown file: 1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
 
-      - name: Debugging step - Check Markdown content
+      - name: Check if markdown file exists
+        id: file-check
+        run: |
+          FILE_PATH="1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
+          if [ -f "$FILE_PATH" ]; then
+            echo "file_exists=true" >> $GITHUB_ENV
+          else
+            echo "file_exists=false" >> $GITHUB_ENV
+          fi
+
+      - name: Handle file existence and create PR if needed
+        if: env.file_exists == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Provide GitHub token for authentication
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
-          cat "1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md"
+          TIMESTAMP=$(date +%s)  # Generate a Unix timestamp
+          BRANCH_NAME="pr-for-issue-${ISSUE_NUMBER}-${TIMESTAMP}"
+          
+          # Create a new branch for the update
+          git checkout -b "$BRANCH_NAME"
+          git config --local user.name "github-actions"
+          git config --local user.email "github-actions@github.com"
+          
+          # Add and commit the changes
+          git add "1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md"
+          git commit -m "Update markdown file for issue #${ISSUE_NUMBER}" || echo "No changes to commit"
+          
+          # Push the branch
+          git push --set-upstream origin "$BRANCH_NAME" || echo "No new commits to push"
+          
+          # Create a pull request using the GitHub CLI
+          gh pr create --title "Update markdown for issue #${ISSUE_NUMBER}" --body "This PR updates the markdown file for issue #${ISSUE_NUMBER}." || echo "Failed to create PR"
 
-      - name: Commit the new markdown file
+      - name: Commit the new markdown file if it doesn't exist
+        if: env.file_exists == 'false'
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
           git status  # Check if there are any changes to commit
-          git add 1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md
+          git add "1-Atoms--atomic-ideas/active/issue-${ISSUE_NUMBER}.md"
           git commit -m "Add markdown file for issue #${ISSUE_NUMBER}" || echo "No changes to commit"
           git push || echo "No new commits to push"
