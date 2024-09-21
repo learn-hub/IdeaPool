@@ -15,6 +15,46 @@ _No response_
 An explanation of the concept of origin in measurement with illustrative storytelling examples.
 
 ### Main Idea
+Page Title: Number Line
+
+Story:
+
+"Four Hands" asked "Niko" for the address of the wheat field. Niko pointed in a direction with his hand and said, "Go 200 meters in this direction and you'll find the wheat field."
+
+Four Hands thanked Niko and said, "I've been looking for the wheat field for three days. Everyone I've asked gave me a different address."
+
+On the first day, I saw Niko on this road and asked him for the address. Niko said, "Go 200 meters and you'll find the wheat field." But because I didn't know which direction to go, I couldn't find the field.
+
+On the second day, I saw "Mouse" here. He said, "Move 200 units in this direction to reach the field." I didn't understand what he meant by "200 units". Was it 200 steps, 200 meters, 200 jumps, or something else? I didn't reach the wheat field because the unit of movement wasn't clear.
+
+On the third day, I saw "Beetle". He said, "I once walked 150 meters east from my friend's house and found a beautiful garden."
+
+I thanked Beetle and said, "I understand now. To reach my destination, I need to know three things: the starting point, the direction, and the unit of measurement."
+
+**Explanation:**
+
+A number line is a straight line with a starting point (origin), direction, and unit of measurement. Each point on the number line can be represented by a number. This number consists of a value and a sign.
+
+* **Value:** The distance of the point from the origin.
+* **Sign:** Indicates the position of the point relative to the origin. If it's to the right, the sign is positive; if it's to the left, the sign is negative.
+
+For example, in the number line below, point A corresponds to the number 4, and point B corresponds to the number -2.
+
+[Image of a number line with points A and B]
+
+**Comparing Integers:**
+
+To compare two integers A and B on a number line:
+
+* If point A is to the right of point B, then A is greater than B.
+* If point A is to the left of point B, then A is less than B.
+
+**Example:**
+
+In the number line below, point 6 is to the right of point 3. Therefore, 6 is greater than 3.
+
+[Image of a number line with points 6 and 3]
+
 
 ![Illustrating Origin in Measurement](https://github.com/user-attachments/assets/bbf83eae-6ec8-448d-abf1-70011a6790ea)
 
