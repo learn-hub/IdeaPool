@@ -76,7 +76,7 @@ pre-elementary and above
 
 ### Educational Sub-Category
 
-Basic concepts in mathematics and measurement.
+origin, direction, and unit of measurement
 
 ### Standards
 
