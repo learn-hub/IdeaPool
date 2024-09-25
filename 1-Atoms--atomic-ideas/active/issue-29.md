@@ -1,3 +1,5 @@
+**Tags:** $${\color{purple}[Logarithmic] \space {\color{black},} \space \color{green}[Application]}$$
+
 ### Idea Title
 
 Mathematics in Earthquake Science: Understanding Seismic Activity through the Richter Scale Based on Logarithm
