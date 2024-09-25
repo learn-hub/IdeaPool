@@ -1,4 +1,4 @@
-**Tags:** $${\color{purple}[Logarithmic] \space {\color{black},} \space \color{green}[Application]}$$
+**Tags:** $${\color{purple}[Logarithmic] \space {\color{black},} \space \color{green}[Application] \space {\color{black},} \color{olive}[Earthquake] \space {\color{black},}  \space {\color{salmon} \textbf{8/10}}}$$
 
 ### Idea Title
 
