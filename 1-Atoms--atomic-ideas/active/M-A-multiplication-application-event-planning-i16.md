@@ -1,3 +1,6 @@
+
+**Tags:** $${ \color{purple}[Multiplication] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Event Planning] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
+
 ### Idea Title
 
 Calculating the Number of Cakes Required for Hosting 8 Workshops
@@ -105,10 +108,6 @@ _No response_
 ### Code of Conduct Agreement
 
 - [X] I agree to follow this project’s Code of Conduct
-
----
-
-**Tags:** $${ \color{purple}[Arithmetic] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Event Planning] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
 
 ---
 
