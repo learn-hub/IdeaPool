@@ -40,7 +40,7 @@ jobs:
           MD_CONTENT=$(bash .github/workflows/generate_markdown.sh "$ISSUE_BODY")
           echo "$MD_CONTENT" > "1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
           echo "Created markdown file: 1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
-                
+                      
       - name: Extract Tags from Markdown and Rename File
         id: rename_md
         run: |
@@ -51,9 +51,8 @@ jobs:
           # Debugging step: Print the first line
           echo "First line of markdown file: $FIRST_LINE"
           
-          # Extract the tags between the **Tags:** and the $$ symbols
-          # This regex extracts the content between the $${ and $$ delimiters
-          TAGS=$(echo "$FIRST_LINE" | sed -n 's/.*Tags:** \$\$\([^$]*\)\$\$/\1/p')
+          # Extract the tags: remove all LaTeX formatting and leave just the tags
+          TAGS=$(echo "$FIRST_LINE" | grep -oP '(?<=\[\w+\]).*?(?=\[\w+\])')
       
           # Debugging step: Print the extracted tags
           echo "Extracted tags: $TAGS"
