@@ -1,4 +1,4 @@
-**Tags:** $${ \color{purple}[Geometry] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Constant Width Curves] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
+**Tags:** $${ \color{purple}[Geometry-Constant Width Curves] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Day to Day Life] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
 
 ### Idea Title
 
