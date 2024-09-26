@@ -1,4 +1,4 @@
-**Tags:** $${ \color{purple}[Counting Mosaics] \space { \color{black},} \space \color{green}[Game] \space { \color{black},} \color{olive}[Math Activities] \space { \color{black},} \space { \color{salmon} \textbf{7/10}}}$$
+**Tags:** $${ \color{purple}[Multiplication] \space { \color{black},} \space \color{green}[Game] \space { \color{black},} \color{olive}[Math Activities-Counting Mosaics] \space { \color{black},} \space { \color{salmon} \textbf{7/10}}}$$
 
 ### Idea Title
 
