@@ -1,4 +1,4 @@
-**Tags:** $${ \color{purple}[Solar Phenomena] \space { \color{black},} \space \color{green}[Sense-making] \space { \color{black},} \color{olive}[Astronomy] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
+**Tags:** $${ \color{purple}[Ratio] \space { \color{black},} \space \color{green}[Sense-making] \space { \color{black},} \color{olive}[Astronomy] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
 
 ### Idea Title
 
