@@ -51,15 +51,14 @@ jobs:
           # Debugging step: Print the first line
           echo "First line of markdown file: $FIRST_LINE"
           
-          # Extract the tags: remove all LaTeX formatting and leave just the tags
-          TAGS=$(echo "$FIRST_LINE" | grep -oP '(?<=\[\w+\]).*?(?=\[\w+\])')
+          # Extract the content inside [ ] (tags), removing LaTeX formatting using sed
+          TAGS=$(echo "$FIRST_LINE" | sed 's/.*Tags:** \$\$\(.*\)\$\$/\1/' | sed 's/\\color{[^}]*}//g' | sed 's/\\space//g' | sed 's/\[\|\]//g' | sed 's/{[^}]*}//g')
       
           # Debugging step: Print the extracted tags
           echo "Extracted tags: $TAGS"
       
-          # Clean up the tags: remove color formatting, extra LaTeX commands, and commas
-          # Replace LaTeX \color{...} with nothing, remove \space, and strip special characters
-          CLEAN_TAGS=$(echo "$TAGS" | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/[{}]//g' | tr -d ',' | tr '[:space:]' '-' | tr '[:upper:]' '[:lower:]')
+          # Clean up the tags by removing excess spaces and replacing them with hyphens
+          CLEAN_TAGS=$(echo "$TAGS" | tr -s ' ' | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
       
           # Debugging step: Print the cleaned tags
           echo "Cleaned tags: $CLEAN_TAGS"
