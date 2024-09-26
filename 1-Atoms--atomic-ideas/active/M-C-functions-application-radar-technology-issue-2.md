@@ -1,4 +1,4 @@
-**Tags:** $${ \color{purple}[Mathematics] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Radar Technology] \space { \color{black},} \space { \color{salmon} \textbf{7/10}}}$$
+**Tags:** $${ \color{purple}[Functions] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Radar Technology] \space { \color{black},} \space { \color{salmon} \textbf{7/10}}}$$
 
 ---
 
