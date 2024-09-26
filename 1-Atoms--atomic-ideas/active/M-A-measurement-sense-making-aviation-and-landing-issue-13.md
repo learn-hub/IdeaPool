@@ -1,4 +1,4 @@
-**Tags:** $${ \color{purple}[Aviation] \space { \color{black},} \space \color{green}[Sense-making] \space { \color{black},} \color{olive}[Landing] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
+**Tags:** $${ \color{purple}[Measurement] \space { \color{black},} \space \color{green}[Sense-making] \space { \color{black},} \color{olive}[Aviation and Landing] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
 
 ### Idea Title
 
