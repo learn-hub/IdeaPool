@@ -52,7 +52,7 @@ jobs:
           echo "Extracted line: $FIRST_LINE"
           
           # Use awk to extract content between $${ and $$, then use sed to clean it
-          TAGS=$(echo "$FIRST_LINE" | awk -F '\\$\\$' '{print $2}' | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/\[\|\]//g' -e 's/{[^}]*}//g' -e 's/\\textbf{[^}]*}//g' -e 's/,/ /g' -e 's/[[:space:]]\+/ /g')
+          TAGS=$(echo "$FIRST_LINE" | awk -F '\\$\\$' '{print $2}' | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/\[\|\]//g' -e 's/{[^}]*}//g' -e 's/\\textbf{[^}]*}//g' -e 's/[[:space:]]\+ /g' -e 's/}}//g')
       
           # Debugging step: Print the extracted tags
           echo "Extracted tags: $TAGS"
