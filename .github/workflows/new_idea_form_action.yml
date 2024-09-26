@@ -44,12 +44,12 @@ jobs:
       - name: Extract Tags from Markdown and Rename File
         id: rename_md
         run: |
-          # Extract the first line (Tags) from the generated markdown file
+          # Extract the line containing "**Tags:**" from the markdown file
           FILE_PATH="1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
-          FIRST_LINE=$(head -n 1 "$FILE_PATH")
+          FIRST_LINE=$(grep '\*\*Tags:\*\*' "$FILE_PATH")
           
-          # Debugging step: Print the first line
-          echo "First line of markdown file: $FIRST_LINE"
+          # Debugging step: Print the extracted line
+          echo "Extracted line: $FIRST_LINE"
           
           # Use awk to extract content between $${ and $$, then use sed to clean it
           TAGS=$(echo "$FIRST_LINE" | awk -F '\\$\\$' '{print $2}' | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/\[\|\]//g' -e 's/{[^}]*}//g' -e 's/\\textbf{[^}]*}//g' -e 's/,/ /g' -e 's/[[:space:]]\+/ /g')
