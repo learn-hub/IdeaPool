@@ -1,4 +1,4 @@
-**Tags:** $${color{purple}[Pythagorean Theorem]space {color{black},}spacecolor{green}[Application]space {color{black},}color{olive}[Chamfer in Building]space {color{black},} space {color{salmon}textbf{8/10}}}$$ 
+**Tags:** $${\color{purple}[Math\space :\space Pythagorean\space Theorem]\space {\color{black},}\space\color{green}[Application]\space {\color{black},}\color{olive}[Chamfer\space in\space Building]\space {\color{black},} \space {\color{salmon}\textbf{8/10}}}$$ 
 
 ### Idea Title
 
@@ -112,7 +112,6 @@ jabarifahimeh.2016@gmail.com
 
 ### Final Translation in Farsi
 
-**برچسب‌ها:** $${color{purple}[قضیه فیثاغورث]space {color{black},}spacecolor{green}[کاربرد]space {color{black},}color{olive}[پخ در ساختمان]space {color{black},} space {color{salmon}textbf{8/10}}}$$ 
 
 ### عنوان ایده
 
