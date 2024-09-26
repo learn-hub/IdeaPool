@@ -1,3 +1,5 @@
+**Tags:** $${ \color{purple}[Function] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Traffic Safety] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
+
 ### Idea Title
 
 Impact of Speed on Driver Visibility
@@ -111,8 +113,6 @@ jabarifahimeh.2016@gmail.com
 ### Code of Conduct Agreement 
 
 - [X] I agree to follow this project's Code of Conduct
-
-**Tags:** $${ \color{purple}[Mathematics] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Traffic Safety] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
 
 ---
 
