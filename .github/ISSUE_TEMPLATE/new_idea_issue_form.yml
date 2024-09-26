@@ -97,106 +97,106 @@ body:
       label: Main Educational Subject Area
       description: Select the main educational subject
       options:
-        - math--arithmetic
-        - math--algebra
-        - math--geometry
-        - math--trigonometry
-        - math--calculus
-        - math--statistics
-        - math--probability
-        - math--number-theory
-        - math--linear-algebra
-        - math--differential-equations
-        - math--discrete-mathematics
-        - math--topology
-        - math--mathematical-logic
-        - math--complex-analysis
-        - math--real-analysis
-        - math--numerical-analysis
-        - math--mathematical-modeling
-        - math--set-theory
-        - math--game-theory
-        - math--optimization
-        - physics--classical-mechanics
-        - physics--thermodynamics
-        - physics--electromagnetism
-        - physics--optics
-        - physics--quantum-mechanics
-        - physics--relativity
-        - physics--particle-physics
-        - physics--astrophysics
-        - physics--nuclear-physics
-        - physics--condensed-matter
-        - physics--fluid-dynamics
-        - physics--atomic-physics
-        - physics--statistical-mechanics
-        - physics--plasma-physics
-        - physics--wave-theory
-        - physics--acoustics
-        - physics--biophysics
-        - physics--geophysics
-        - physics--quantum-field-theory
-        - physics--experimental-physics
-        - chemistry--organic-chemistry
-        - chemistry--inorganic-chemistry
-        - chemistry--physical-chemistry
-        - chemistry--analytical-chemistry
-        - chemistry--biochemistry
-        - chemistry--theoretical-chemistry
-        - chemistry--environmental-chemistry
-        - chemistry--materials-science
-        - chemistry--polymer-chemistry
-        - chemistry--supramolecular-chemistry
-        - chemistry--nanochemistry
-        - chemistry--industrial-chemistry
-        - chemistry--quantum-chemistry
-        - chemistry--electrochemistry
-        - chemistry--chemical-engineering
-        - chemistry--spectroscopy
-        - chemistry--crystallography
-        - chemistry--surface-chemistry
-        - chemistry--photochemistry
-        - chemistry--organometallic-chemistry
-        - biology--cell-biology
-        - biology--genetics
-        - biology--molecular-biology
-        - biology--evolutionary-biology
-        - biology--ecology
-        - biology--microbiology
-        - biology--biochemistry
-        - biology--anatomy
-        - biology--physiology
-        - biology--developmental-biology
-        - biology--neuroscience
-        - biology--immunology
-        - biology--botany
-        - biology--zoology
-        - biology--marine-biology
-        - biology--environmental-biology
-        - biology--virology
-        - biology--bioinformatics
-        - biology--bioengineering
-        - biology--astrobiology
-        - computer--programming
-        - computer--algorithms
-        - computer--data-structures
-        - computer--operating-systems
-        - computer--databases
-        - computer--computer-networks
-        - computer--artificial-intelligence
-        - computer--machine-learning
-        - computer--computer-graphics
-        - computer--human-computer-interaction
-        - computer--software-engineering
-        - computer--theory-of-computation
-        - computer--cybersecurity
-        - computer--computer-architecture
-        - computer--distributed-systems
-        - computer--cloud-computing
-        - computer--web-development
-        - computer--mobile-computing
-        - computer--computer-vision
-        - computer--natural-language-processing
+        - math--arithmetic (M-A)
+        - math--algebra (M-AL)
+        - math--geometry (M-G)
+        - math--trigonometry (M-T)
+        - math--calculus (M-C)
+        - math--statistics (M-S)
+        - math--probability (M-P)
+        - math--number-theory (M-N)
+        - math--linear-algebra (M-LA)
+        - math--differential-equations (M-DE)
+        - math--discrete-mathematics (M-D)
+        - math--topology (M-TP)
+        - math--mathematical-logic (M-L)
+        - math--complex-analysis (M-CA)
+        - math--real-analysis (M-RA)
+        - math--numerical-analysis (M-NA)
+        - math--mathematical-modeling (M-M)
+        - math--set-theory (M-ST)
+        - math--game-theory (M-GT)
+        - math--optimization (M-O)
+        - physics--classical-mechanics (P-CM)
+        - physics--thermodynamics (P-TD)
+        - physics--electromagnetism (P-EM)
+        - physics--optics (P-O)
+        - physics--quantum-mechanics (P-Q)
+        - physics--relativity (P-R)
+        - physics--particle-physics (P-PP)
+        - physics--astrophysics (P-A)
+        - physics--nuclear-physics (P-N)
+        - physics--condensed-matter (P-C)
+        - physics--fluid-dynamics (P-F)
+        - physics--atomic-physics (P-AP)
+        - physics--statistical-mechanics (P-SM)
+        - physics--plasma-physics (P-P)
+        - physics--wave-theory (P-WT)
+        - physics--acoustics (P-AC)
+        - physics--biophysics (P-B)
+        - physics--geophysics (P-G)
+        - physics--quantum-field-theory (P-QF)
+        - physics--experimental-physics (P-E)
+        - chemistry--organic-chemistry (C-OC)
+        - chemistry--inorganic-chemistry (C-IC)
+        - chemistry--physical-chemistry (C-PC)
+        - chemistry--analytical-chemistry (C-AC)
+        - chemistry--biochemistry (C-B)
+        - chemistry--theoretical-chemistry (C-TC)
+        - chemistry--environmental-chemistry (C-EC)
+        - chemistry--materials-science (C-MS)
+        - chemistry--polymer-chemistry (C-POL)
+        - chemistry--supramolecular-chemistry (C-SMC)
+        - chemistry--nanochemistry (C-NC)
+        - chemistry--industrial-chemistry (C-IC)
+        - chemistry--quantum-chemistry (C-QC)
+        - chemistry--electrochemistry (C-EC)
+        - chemistry--chemical-engineering (C-CE)
+        - chemistry--spectroscopy (C-SP)
+        - chemistry--crystallography (C-CR)
+        - chemistry--surface-chemistry (C-SC)
+        - chemistry--photochemistry (C-PC)
+        - chemistry--organometallic-chemistry (C-OMC)
+        - biology--cell-biology (B-CB)
+        - biology--genetics (B-G)
+        - biology--molecular-biology (B-MB)
+        - biology--evolutionary-biology (B-EB)
+        - biology--ecology (B-E)
+        - biology--microbiology (B-MIC)
+        - biology--biochemistry (B-BC)
+        - biology--anatomy (B-A)
+        - biology--physiology (B-P)
+        - biology--developmental-biology (B-DB)
+        - biology--neuroscience (B-N)
+        - biology--immunology (B-IM)
+        - biology--botany (B-BOT)
+        - biology--zoology (B-Z)
+        - biology--marine-biology (B-MB)
+        - biology--environmental-biology (B-EB)
+        - biology--virology (B-V)
+        - biology--bioinformatics (B-BI)
+        - biology--bioengineering (B-BE)
+        - biology--astrobiology (B-AB)
+        - computer--programming (CS-P)
+        - computer--algorithms (CS-ALG)
+        - computer--data-structures (CS-DS)
+        - computer--operating-systems (CS-OS)
+        - computer--databases (CS-DB)
+        - computer--computer-networks (CS-CN)
+        - computer--artificial-intelligence (CS-AI)
+        - computer--machine-learning (CS-ML)
+        - computer--computer-graphics (CS-CG)
+        - computer--human-computer-interaction (CS-HCI)
+        - computer--software-engineering (CS-SE)
+        - computer--theory-of-computation (CS-TC)
+        - computer--cybersecurity (CS-CS)
+        - computer--computer-architecture (CS-CA)
+        - computer--distributed-systems (CS-DS)
+        - computer--cloud-computing (CS-CC)
+        - computer--web-development (CS-WD)
+        - computer--mobile-computing (CS-MC)
+        - computer--computer-vision (CS-CV)
+        - computer--natural-language-processing (CS-NLP)
 
   - type: dropdown
     id: education-level
