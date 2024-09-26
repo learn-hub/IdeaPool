@@ -40,7 +40,7 @@ jobs:
           MD_CONTENT=$(bash .github/workflows/generate_markdown.sh "$ISSUE_BODY")
           echo "$MD_CONTENT" > "1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
           echo "Created markdown file: 1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
-                            
+      
       - name: Extract Tags from Markdown and Rename File
         id: rename_md
         run: |
@@ -52,7 +52,7 @@ jobs:
           echo "Extracted line: $FIRST_LINE"
           
           # Use awk to extract content between $${ and $$, then use sed to clean it
-          TAGS=$(echo "$FIRST_LINE" | awk -F '\\$\\$' '{print $2}' | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/\[\|\]//g' -e 's/{[^}]*}//g' -e 's/\\textbf{[^}]*}//g' -e 's/[[:space:]]+/ /g' -e 's/}}//g')
+          TAGS=$(echo "$FIRST_LINE" | awk -F '\\$\\$' '{print $2}' | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/\[\|\]//g' -e 's/{[^}]*}//g' -e 's/\\textbf{[^}]*}//g' -e 's/,/ /g' -e 's/[[:space:]]\+/ /g')
       
           # Debugging step: Print the extracted tags
           echo "Extracted tags: $TAGS"
@@ -73,9 +73,6 @@ jobs:
           # Rename the file
           mv "$FILE_PATH" "$NEW_FILE_PATH"
       
-          # Output the new file path for debugging
-          echo "Renamed markdown file to: $NEW_FILE_NAME"
-
       - name: Check if markdown file exists
         id: file-check
         run: |
