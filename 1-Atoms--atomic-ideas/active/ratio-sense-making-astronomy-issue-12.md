@@ -1,4 +1,4 @@
-**Tags:** $${ \color{purple}[Astronomy] \space { \color{black},} \space \color{green}[Visual Explanation] \space { \color{black},} \color{olive}[Solar System] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
+**Tags:** $${ \color{purple}[Ratio] \space { \color{black},} \space \color{green}[Sense-making] \space { \color{black},} \color{olive}[Astronomy] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
 
 ### Idea Title
 
@@ -24,7 +24,7 @@ Do you see that dark spot in the middle of the sun? That's Mercury! It illustrat
 
 ### Idea Type
 
-Visual Explanation
+Sense-making
 
 ### Main Educational Subject Area
 
