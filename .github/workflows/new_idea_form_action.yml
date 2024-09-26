@@ -67,7 +67,7 @@ jobs:
           echo "Cleaned tags: $CLEAN_TAGS"
           
           # Define the new file name
-          NEW_FILE_NAME="${CLEAN_TAGS}-issue-${{ github.event.issue.number }}.md"
+          NEW_FILE_NAME="$M-A-{CLEAN_TAGS}-i${{ github.event.issue.number }}.md"
           NEW_FILE_PATH="1-Atoms--atomic-ideas/active/$NEW_FILE_NAME"
           
           # Rename the file
