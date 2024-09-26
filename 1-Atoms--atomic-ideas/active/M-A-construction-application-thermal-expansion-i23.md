@@ -13,6 +13,9 @@ No response
 This idea covers the importance of managing thermal expansion and contraction in tiling to prevent cracking due to extreme temperature changes.
 
 ### Main Idea
+
+https://github.com/user-attachments/assets/b7cc491b-ea7f-45bc-867f-f5c2e19da939
+
 Predicting expansion and contraction joints to prevent tile cracking due to temperature changes. 
 On a hot summer day, a team of workers is installing tiles in the surroundings of a building. The project manager advises them to consider expansion joints between the tiles to prevent cracking. The tiles are being installed at 30 degrees Celsius, and the ambient temperature is expected to drop to 0 degrees Celsius in winter. 
 - Each tile measures 50 cm by 50 cm. 
