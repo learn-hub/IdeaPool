@@ -1,4 +1,4 @@
-**Tags:** $${ \color{purple}[Function] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Traffic Safety] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
+**Tags:** $${ \color{purple}[Function] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Traffic-Safety] \space { \color{black},} \space { \color{salmon} \textbf{8/10}}}$$
 
 ### Idea Title
 
