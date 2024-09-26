@@ -1,4 +1,4 @@
-**Tags:** $${ \color{purple}[Graph Theory] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Mathematical Modeling] \space { \color{black},} \space { \color{salmon} \textbf{6/10}}}$$
+**Tags:** $${ \color{purple}[Graph Theory] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Route Finding] \space { \color{black},} \space { \color{salmon} \textbf{6/10}}}$$
 
 ### Idea Title
 
