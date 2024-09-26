@@ -51,8 +51,8 @@ jobs:
           # Debugging step: Print the extracted line
           echo "Extracted line: $FIRST_LINE"
           
-          # Use awk to extract content between $${ and $$, then use sed to clean it
-          TAGS=$(echo "$FIRST_LINE" | awk -F '\\$\\$' '{print $2}' | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/\[\|\]//g' -e 's/{[^}]*}//g' -e 's/\\textbf{[^}]*}//g' -e 's/,/ /g' -e 's/[[:space:]]\+/ /g')
+          # Use sed to extract content between $${ and $$, then clean it
+          TAGS=$(echo "$FIRST_LINE" | sed -n 's/.*\$\${\(.*\)\}\$\$/\1/p' | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/\[\|\]//g' -e 's/{[^}]*}//g' -e 's/\\textbf{[^}]*}//g' -e 's/,/ /g' -e 's/[[:space:]]\+/ /g')
       
           # Debugging step: Print the extracted tags
           echo "Extracted tags: $TAGS"
@@ -69,10 +69,10 @@ jobs:
           # Define the new file name
           NEW_FILE_NAME="${CLEAN_TAGS}-issue-${{ github.event.issue.number }}.md"
           NEW_FILE_PATH="1-Atoms--atomic-ideas/active/$NEW_FILE_NAME"
-      
+          
           # Rename the file
           mv "$FILE_PATH" "$NEW_FILE_PATH"
-      
+
       - name: Check if markdown file exists
         id: file-check
         run: |
