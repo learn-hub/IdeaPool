@@ -22,7 +22,7 @@ ESCAPED_SYSTEM_CONTENT_RAW_VALUE="IdeaPool is a collaborative platform for gathe
 ESCAPED_SYSTEM_CONTENT=$(echo "$ESCAPED_SYSTEM_CONTENT_RAW_VALUE $TAGS" | jq -Rs .)
 
 # Prepare the JSON body for the OpenAI API request
-ESCAPED_JSON_BODY=$(jq -n --arg body "$ESCAPED_ISSUE_BODY" --arg system_content "$ESCAPED_SYSTEM_CONTENT"'{
+ESCAPED_JSON_BODY=$(jq -n --arg body "$ESCAPED_ISSUE_BODY" --arg system_content "$ESCAPED_SYSTEM_CONTENT" '{
     "model": "gpt-4o-mini",
     "messages": [
         {"role": "system", "content": $system_content},
@@ -35,10 +35,7 @@ echo "Debugging log: ESCAPED_JSON_BODY content:" >&2
 echo "$ESCAPED_JSON_BODY" >&2
 
 # Validate the JSON body using jq
-echo "$ESCAPED_JSON_BODY" | jq . > /dev/null 2>&1
-
-# Check if the JSON is valid
-if [ $? -eq 0 ]; then
+if echo "$ESCAPED_JSON_BODY" | jq . > /dev/null 2>&1; then
     echo "Valid JSON" >&2
 else
     echo "Invalid JSON" >&2
