@@ -91,10 +91,9 @@ jobs:
           ISSUE_NUMBER=${{ github.event.issue.number }}
           TIMESTAMP=$(date +%s)  # Generate a Unix timestamp
           BRANCH_NAME="pr-for-issue-${ISSUE_NUMBER}-${TIMESTAMP}"
-          git pull main
+          
           # Create a new branch for the update
           git checkout -b "$BRANCH_NAME"
-          git merge main
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
           
@@ -115,9 +114,6 @@ jobs:
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
           git status  # Check if there are any changes to commit
-          git pull main
-          git checkout -b "$BRANCH_NAME"
-          git merge main
           git add "1-Atoms--atomic-ideas/active/${{ steps.rename_md.outputs.new_file_name }}"
           git commit -m "Add markdown file for issue #${ISSUE_NUMBER}" || echo "No changes to commit"
           git push || echo "No new commits to push"
