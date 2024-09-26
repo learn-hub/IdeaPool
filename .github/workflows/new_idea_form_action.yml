@@ -40,7 +40,7 @@ jobs:
           MD_CONTENT=$(bash .github/workflows/generate_markdown.sh "$ISSUE_BODY")
           echo "$MD_CONTENT" > "1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
           echo "Created markdown file: 1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
-
+          
       - name: Extract Tags from Markdown and Rename File
         id: rename_md
         run: |
@@ -48,19 +48,28 @@ jobs:
           FILE_PATH="1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
           FIRST_LINE=$(head -n 1 "$FILE_PATH")
           
+          # Debugging step: Print the first line
+          echo "First line of markdown file: $FIRST_LINE"
+          
           # Extract the tags between the **Tags:** and the $$ symbols
-          TAGS=$(echo "$FIRST_LINE" | sed -n 's/.*Tags:** \(.*\)\$\$*/\1/p')
-
-          # Clean up the tags to be used in the filename: replace spaces, commas, special characters, and color formatting
-          CLEAN_TAGS=$(echo "$TAGS" | sed 's/\\color{[^}]*}//g' | sed 's/[\[\],]//g' | tr -d '[:space:]' | tr '[:upper:]' '[:lower:]' | tr -s '-' '-')
+          TAGS=$(echo "$FIRST_LINE" | sed -n 's/.*Tags:** *\$\$\({.*}\)\$\$*/\1/p')
+      
+          # Debugging step: Print the extracted tags
+          echo "Extracted tags: $TAGS"
+      
+          # Clean up the tags to be used in the filename: remove LaTeX color formatting and special characters
+          CLEAN_TAGS=$(echo "$TAGS" | sed -e 's/\\color{[^}]*}//g' -e 's/[{}]//g' -e 's/\[//g' -e 's/\]//g' | tr -d '[:space:]' | tr '[:upper:]' '[:lower:]' | tr ',' '-')
+      
+          # Debugging step: Print the cleaned tags
+          echo "Cleaned tags: $CLEAN_TAGS"
           
           # Define the new file name
           NEW_FILE_NAME="${CLEAN_TAGS}-issue-${{ github.event.issue.number }}.md"
           NEW_FILE_PATH="1-Atoms--atomic-ideas/active/$NEW_FILE_NAME"
-
+      
           # Rename the file
           mv "$FILE_PATH" "$NEW_FILE_PATH"
-
+      
           # Output the new file path for debugging
           echo "Renamed markdown file to: $NEW_FILE_NAME"
 
