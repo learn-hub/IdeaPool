@@ -52,13 +52,16 @@ jobs:
           echo "First line of markdown file: $FIRST_LINE"
           
           # Use awk to extract content between $${ and $$, then use sed to clean it
-          TAGS=$(echo "$FIRST_LINE" | awk -F '\\$\\$' '{print $2}' | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/[\[\]{}]//g' -e 's/\textbf{[^}]*}//g' -e 's/,/ /g' -e 's/[[:space:]]\+/ /g')
+          TAGS=$(echo "$FIRST_LINE" | awk -F '\\$\\$' '{print $2}' | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/\[\|\]//g' -e 's/{[^}]*}//g' -e 's/\\textbf{[^}]*}//g' -e 's/,/ /g' -e 's/[[:space:]]\+/ /g')
       
           # Debugging step: Print the extracted tags
           echo "Extracted tags: $TAGS"
       
-          # Clean up the tags: Trim leading/trailing spaces and replace spaces with hyphens
-          CLEAN_TAGS=$(echo "$TAGS" | sed -e 's/^[[:space:]]*//g' -e 's/[[:space:]]*$//g' | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
+          # Remove any remaining braces or special characters
+          CLEAN_TAGS=$(echo "$TAGS" | sed -e 's/[{}]//g')
+      
+          # Clean up the tags by trimming leading/trailing spaces, replacing spaces with hyphens, and converting to lowercase
+          CLEAN_TAGS=$(echo "$CLEAN_TAGS" | sed -e 's/^[[:space:]]*//g' -e 's/[[:space:]]*$//g' | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
       
           # Debugging step: Print the cleaned tags
           echo "Cleaned tags: $CLEAN_TAGS"
@@ -72,7 +75,6 @@ jobs:
       
           # Output the new file path for debugging
           echo "Renamed markdown file to: $NEW_FILE_NAME"
-
 
       - name: Check if markdown file exists
         id: file-check
