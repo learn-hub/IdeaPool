@@ -40,7 +40,7 @@ jobs:
           MD_CONTENT=$(bash .github/workflows/generate_markdown.sh "$ISSUE_BODY")
           echo "$MD_CONTENT" > "1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
           echo "Created markdown file: 1-Atoms--atomic-ideas/active/issue-${{ github.event.issue.number }}.md"
-          
+                
       - name: Extract Tags from Markdown and Rename File
         id: rename_md
         run: |
@@ -52,13 +52,15 @@ jobs:
           echo "First line of markdown file: $FIRST_LINE"
           
           # Extract the tags between the **Tags:** and the $$ symbols
-          TAGS=$(echo "$FIRST_LINE" | sed -n 's/.*Tags:** *\$\$\({.*}\)\$\$*/\1/p')
+          # This regex extracts the content between the $${ and $$ delimiters
+          TAGS=$(echo "$FIRST_LINE" | sed -n 's/.*Tags:** \$\$\([^$]*\)\$\$/\1/p')
       
           # Debugging step: Print the extracted tags
           echo "Extracted tags: $TAGS"
       
-          # Clean up the tags to be used in the filename: remove LaTeX color formatting and special characters
-          CLEAN_TAGS=$(echo "$TAGS" | sed -e 's/\\color{[^}]*}//g' -e 's/[{}]//g' -e 's/\[//g' -e 's/\]//g' | tr -d '[:space:]' | tr '[:upper:]' '[:lower:]' | tr ',' '-')
+          # Clean up the tags: remove color formatting, extra LaTeX commands, and commas
+          # Replace LaTeX \color{...} with nothing, remove \space, and strip special characters
+          CLEAN_TAGS=$(echo "$TAGS" | sed -e 's/\\color{[^}]*}//g' -e 's/\\space//g' -e 's/[{}]//g' | tr -d ',' | tr '[:space:]' '-' | tr '[:upper:]' '[:lower:]')
       
           # Debugging step: Print the cleaned tags
           echo "Cleaned tags: $CLEAN_TAGS"
