@@ -1,7 +1,10 @@
-https://www.youtube.com/watch?v=JEn5sm8CW9Q
-# 03 -- Vectors -- Sweet Conceptual Physics By Paul Hewitt
 
-# Lecture Content and Demonstrations with Atomic Idea Types -- used ChatGPT
+
+# [Video:](https://www.youtube.com/watch?v=JEn5sm8CW9Q) 03 -- Vectors -- Sweet Conceptual Physics By Paul Hewitt 
+
+[![Video](https://img.youtube.com/vi/JEn5sm8CW9Q/0.jpg)](https://www.youtube.com/watch?v=JEn5sm8CW9Q)
+
+## Lecture Content and Demonstrations with Atomic Idea Types -- (used ChatGPT)
 
 ### 1. Introduction to Vectors (0:54 - 2:01)
 - *Content:* Explaining vectors as arrows representing direction and magnitude using airplane speed and wind.
