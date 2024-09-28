@@ -4,7 +4,7 @@
 
 [![Video](https://img.youtube.com/vi/JEn5sm8CW9Q/0.jpg)](https://www.youtube.com/watch?v=JEn5sm8CW9Q)
 
-## Lecture Content and Demonstrations with Atomic Idea Types -- (used ChatGPT)
+# Useful Notes, Sections and Highlights: 
 
 ### 1. Introduction to Vectors (0:54 - 2:01)
 - *Content:* Explaining vectors as arrows representing direction and magnitude using airplane speed and wind.
