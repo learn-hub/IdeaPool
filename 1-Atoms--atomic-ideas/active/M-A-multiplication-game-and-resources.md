@@ -1,4 +1,12 @@
-### https://www.arcademics.com/
+### Kahoot (mobile game) 8/10
+https://play.google.com/store/apps/details?id=com.kahoot.multiplication&hl=en
+
+<img width="400" alt="Screenshot 2024-09-29 at 12 59 58 PM" src="https://github.com/user-attachments/assets/5e43be6e-53c7-42be-a356-7ae0be6b13de">
+
+### arcademics (desktop game) 7/10
+
+https://www.arcademics.com/
+
 <img width="500" alt="Screenshot 2024-09-29 at 12 07 59 PM" src="https://github.com/user-attachments/assets/df162839-d51f-4149-924f-fc20f8408a1d">
 
 
@@ -44,4 +52,15 @@ https://www.arcademics.com/games/space-race multiplayer 7/10
 https://www.arcademics.com/games/swimming-otters
 
 <img width="400" alt="Screenshot 2024-09-29 at 12 16 17 PM" src="https://github.com/user-attachments/assets/b5f152b0-713e-4920-b12c-5c30b17cf526">
+
+
+### Education 5/10
+https://www.education.com/games/multiplication/
+
+<img width="200" alt="Screenshot 2024-09-29 at 1 25 13 PM" src="https://github.com/user-attachments/assets/18b7a349-d94c-4072-a24d-b8eb86eeb383">
+
+https://www.education.com/game/multiply-by-9-skiracer/
+
+<img width="400" alt="Screenshot 2024-09-29 at 1 23 46 PM" src="https://github.com/user-attachments/assets/f88bbb1f-bf86-4252-a33e-1167ed7e911c">
+
 
