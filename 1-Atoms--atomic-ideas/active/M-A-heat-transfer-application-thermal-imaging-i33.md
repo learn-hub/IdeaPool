@@ -1,4 +1,4 @@
-**Tags:** $${ \color{purple}[Heat Transfer] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Thermal Imaging] \space { \color{black},} \space { \color{salmon} \textbf{9/10}}}$$
+**Tags:** $${ \color{purple}[Functions] \space { \color{black},} \space \color{green}[Application] \space { \color{black},} \color{olive}[Thermal Imaging] \space { \color{black},} \space { \color{salmon} \textbf{9/10}}}$$
 
 ### Idea Title
 
