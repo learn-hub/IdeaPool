@@ -1,5 +1,7 @@
 **Tags:** $${ \color{purple}[Probability] \space { \color{black},} \space \color{green}[Sense-making] \space { \color{black},} \color{olive}[Statistics] \space { \color{black},} \space { \color{salmon} \textbf{9/10}}}$$
 
+## LEVEL 1
+
 ### Idea Title
 
 Exploring Probability: The Coin Flip Experiment and the Illusion of Special Outcomes
