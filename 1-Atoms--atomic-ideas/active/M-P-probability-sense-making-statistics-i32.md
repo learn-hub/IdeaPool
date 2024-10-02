@@ -1,5 +1,7 @@
 **Tags:** $${ \color{purple}[Probability] \space { \color{black},} \space \color{green}[Sense-making] \space { \color{black},} \color{olive}[Statistics] \space { \color{black},} \space { \color{salmon} \textbf{9/10}}}$$
 
+### TWO LEVELS
+
 ## LEVEL 1
 
 ### Idea Title
